@@ -1,10 +1,12 @@
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Main from './Components/Main/Main';
+import NavBar from './Components/Nav/NavBar';
 
 const App = () =>  {
   return (
     <>
+      <NavBar/>
       <Header/>
       <Main/>
       <Footer/>
