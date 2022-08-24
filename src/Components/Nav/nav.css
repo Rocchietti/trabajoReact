@@ -1,0 +1,31 @@
+.tituloTienda{
+    padding: 10px;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Roboto', sans-serif;
+    background-color: antiquewhite;
+}
+.navBar{
+    align-items: center;
+    padding: 10px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px
+}
+ul li{
+    margin: 0px 10px;
+    display: flex;
+}
+li a {
+    color: purple;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+a:active{
+    color: pink
+}

@@ -6,7 +6,6 @@ import NavBar from './Components/Nav/NavBar';
 const App = () =>  {
   return (
     <>
-      <NavBar/>
       <Header/>
       <Main/>
       <Footer/>

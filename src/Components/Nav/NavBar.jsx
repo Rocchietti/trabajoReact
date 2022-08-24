@@ -1,28 +1,26 @@
 import React from 'react';
-import './navbar.css';
-const NavBar = () => {
-  return (
+import './nav.css'
+const NavBar = () =>  {
+    return (
         <header>
-            <h1>Gamergy Store</h1>
-        <nav>
-            <ul>
-                <li className='lista-navbar'>
+            <h1 className='tituloTienda'>Gamergy Store</h1>
+            <nav className='navBar'>
+                <ul className='listUnordened'>
                     <li>
-                    <a href='https://google.com'>Productos</a>
+                        <a href='https://google.com'>Productos</a>
                     </li>
                     <li>
-                    <a href='https://google.com'>¿Quiénes Somos?</a>
+                        <a href='https://google.com'>¿Quiénes Somos?</a>
                     </li>
                     <li>
-                    <a href='https://google.com'>Contacto</a>      
+                        <a href='https://google.com'>Contacto</a>
                     </li>
                     <li>
-                    <a href='https://google.com'>Mi cuenta</a>
+                        <a href='https://google.com'>Mi cuenta</a>
                     </li>
-                </li>
-            </ul>
-        </nav>
-    </header>
+                </ul>
+            </nav>
+        </header>
     );
 }
 
