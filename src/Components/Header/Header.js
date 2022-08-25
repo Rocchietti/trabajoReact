@@ -1,4 +1,3 @@
-import ItemListContainer from '../ItemListContainer/ItemListContainer';
 import NavBar from '../Nav/NavBar';
 import './header.css';
 const Header = () => {
