@@ -10,7 +10,7 @@ const App = () =>  {
   return (
     <Layout>
       <Header/>
-      <ItemListContainer/>
+      <ItemListContainer saludo='He luchado mucho tiempo por sobrevivir, pero no importa qué, siempre tienes que encontrar algo por lo que luchar. THE LAST OF US'/>
       <Main />
       <Footer/>
     </Layout>

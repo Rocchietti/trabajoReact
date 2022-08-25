@@ -4,23 +4,26 @@ import './nav.css'
 const NavBar = () =>  {
     return (
             <>
-        <nav className='navBar'>
-            <ul className='listUnordened'>
-                <li>
-                    <a href='https://google.com'>Productos</a>
-                </li>
-                <li>
-                    <a href='https://google.com'>¿Quiénes Somos?</a>
-                </li>
-                <li>
-                    <a href='https://google.com'>Contacto</a>
-                </li>
-                <li>
-                    <a href='https://google.com'>Mi cuenta</a>
-                </li>
-                <CartWidget />
-            </ul>
-        </nav>
+        <header>
+            <nav className='navBar'>
+            <h1 className='tituloTienda'>Gamergy Store</h1>
+                <ul className='listUnordened'>
+                    <li>
+                        <a href='https://google.com'>Productos</a>
+                    </li>
+                    <li>
+                        <a href='https://google.com'>¿Quiénes Somos?</a>
+                    </li>
+                    <li>
+                        <a href='https://google.com'>Contacto</a>
+                    </li>
+                    <li>
+                        <a href='https://google.com'>Mi cuenta</a>
+                    </li>
+                <CartWidget/>
+                </ul>
+            </nav>
+        </header>
         </>
     );
 }

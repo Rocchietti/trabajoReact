@@ -1,28 +1,30 @@
-.tituloTienda{
-    padding: 10px;
-    font-size: 50px;
-    text-align: center;
-    font-family: 'Abril Fatface', cursive;
+h1{
+    padding-left: 30px;
+    padding-top: 15px;
+}
+header{
+    padding: 0px;
+    font-size: 45px;
+    text-align: left;
     font-family: 'Roboto', sans-serif;
     background-color: antiquewhite;
 }
 .navBar{
-    align-items: center;
     padding: 10px;
 }
-nav ul{
+.listUnordened{
     list-style: none;
     display: flex;
-    justify-content: space-between;
-    margin: 20px
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
 }
 ul li{
-    margin: 0px 10px;
-    display: flex;
+    margin: 0px 40px;
 }
 li a {
     color: purple;
-    font-size: 25px;
+    font-size: 20px;
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
 }

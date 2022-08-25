@@ -1,8 +1,9 @@
 import React from 'react'
 
-const ItemListContainer = () => {
+const ItemListContainer = (props) => {
+  const {saludo} = props
   return (
-    <div>He luchado mucho tiempo por sobrevivir, pero no importa qué, siempre tienes que encontrar algo por lo que luchar. THE LAST OF US</div>
+    <div>{saludo}</div>
   )
 }
 

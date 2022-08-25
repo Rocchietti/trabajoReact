@@ -1,10 +1,9 @@
 import React from 'react'
+import { BiCart } from 'react-icons/bi';
 
 const CartWidget = () => {
   return (
-    <span className="material-symbols-outlined">
-    shopping_cart
-    </span>
+    <BiCart style={{color: 'black', fontSize: '25px', marginTop: '15px'}}/>
   )
 }
 
