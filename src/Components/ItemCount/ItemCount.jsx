@@ -1,22 +1,31 @@
 import React, {useState} from 'react'
 
 const ItemCount = (props) => {
-    
-    const {stock, initial} = props;
+  const {onAdd} = props;
     const [count, setCount] = useState(1) 
 
     const sumar = () => {
-        count <= {stock} ? setCount(count + 1) : alert('Maximo de producto')
+        if( count < (props.stock) ) {
+          setCount(count + 1);
+        }else {
+          alert ('Maximo del producto');
+      }
     }
+
     const restar = () => {
-        count <= {initial} ? setCount(count - 1) : alert ('Minimo del producto')
+        if (count > (props.initial) ) {
+          setCount(count - 1);
+        }else {
+          alert('Minimo del producto');
+        }
     }
+
 
   return (
     <div>
         <button onClick={sumar}>+</button>
-        <p>ItemCount: {initial}</p>
-        <button disabled={count === 0}>Agregar al carrito</button>
+        <p>ItemCount: {count}</p>
+        <button disabled={count === 0} onClick={onAdd}>Agregar al carrito</button>
         <button onClick={restar}>-</button>
     </div>
   )
