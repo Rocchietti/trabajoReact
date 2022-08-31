@@ -1,4 +1,3 @@
-import Button from '../Button/Button'
 import React from 'react';
 import CartWidget from './CartWidget';
 import './nav.css'
@@ -21,7 +20,6 @@ const NavBar = () =>  {
                     <li>
                         <a href='https://google.com'>Mi cuenta</a>
                     </li>
-                    <Button/>
                 <CartWidget/>
                 </ul>
             </nav>
