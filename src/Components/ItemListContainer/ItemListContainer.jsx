@@ -1,15 +1,19 @@
 import React, { useEffect } from 'react'
 import { productos } from './Mock'
 import { useState } from 'react'
+import { useParams } from 'react-router-dom'
 import ItemList from './ItemList'
 const ItemListContainer = (props) => {
   const [items, setitems] = useState([])
-  
+
+  const {categoryId} = useParams()
+
   useEffect(() => {
     const getProducts = new Promise ((res, rej) => {
+      const prodFiltrados = productos.filter((produ) => produ.category === categoryId)
       setTimeout(() =>{
-        res(productos);
-        }, 2000);
+        res(categoryId ? prodFiltrados : productos);
+        }, 500);
       });
         getProducts.then((data) => {
           setitems(data);
@@ -21,11 +25,9 @@ const ItemListContainer = (props) => {
                   console.log('Gracias por la espera');
                   })
 
-  }, []);
-  const {saludo} = props
+  }, [categoryId]);
   return (
     <div>
-      <h1>{saludo}</h1>
       <ItemList items={items}/>
     </div>
   )

@@ -1,14 +1,18 @@
 import React from 'react'
 import Item from './Item';
+import './card.css'
+import ItemCount from '../ItemCount/ItemCount';
 
 const ItemList = ({items}) => {
+
   return (
-  <div>
+  <div className='Card'>
     {
         items.map((item) => {
             return(
-                <div key={item.id}>
+                <div className='kard' key={item.id}>
                     <Item item={item}/>
+                    <ItemCount/>
                 </div>
             )
         })

@@ -1,15 +1,16 @@
 import React from 'react'
+import './card.css'
 
 const Item = ( {item} ) => {
   return (
-    <div>
-        <h1>{item.title}</h1>
-        <h3>{item.price}</h3>
-        <p>{item.description}</p>
-        <p>{item.img}</p>
-        <h4>{item.category}</h4>
+    <div className='detailCard'>
+        <h1 className='item'>{item.title} </h1>
+        <h2 className='item'>{item.price}</h2>
+        <p className='item'>{item.description}</p>
+        <p className='item'>{item.img}</p>
+        <h2 className='item'>{item.category}</h2> 
     </div>
   )
 }
 
-export default Item
+export default Item 

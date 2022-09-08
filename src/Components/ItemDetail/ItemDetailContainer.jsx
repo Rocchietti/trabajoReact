@@ -1,17 +1,17 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
-import { unicoProducto } from '../ItemListContainer/Mock'
+import { productos } from '../ItemListContainer/Mock'
 
 import ItemDetail from './ItemDetail'
 
 const ItemDetailContainer = () => {
-    const [product, setProduct] = useState({})
+    const [product, setProduct] = useState([])
     useEffect(() => { 
     const getDetail = new Promise ((res, rej) => {
         setTimeout(() => {
-            res(unicoProducto)
-        }, 2000); 
+            res(productos)
+        }, 500); 
     });
         getDetail.then((data) => {
             setProduct(data);
@@ -23,11 +23,8 @@ const ItemDetailContainer = () => {
             console.log('TERMINAMO PA')
         })
  
-}, [] );
+}, [product] );
 
-    useEffect(() => {
-        fetch('')
-    })
   return (
     <div>
         <ItemDetail producto={product}/>

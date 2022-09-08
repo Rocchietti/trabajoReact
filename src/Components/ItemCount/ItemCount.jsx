@@ -1,7 +1,12 @@
 import React, {useState} from 'react'
 import './ItemCount.css'
 const ItemCount = (props) => {
-  const {onAdd} = props;
+
+  const onAdd = () =>{
+    alert('Se ha agregado al carrito.')
+  }
+
+
     const [count, setCount] = useState(1) 
 
     const sumar = () => {
@@ -23,10 +28,10 @@ const ItemCount = (props) => {
 
   return (
     <div className='itemcount'>
-        <button onClick={sumar}>+</button>
-        <p>ItemCount: {count}</p>
-        <button disabled={count === 0} onClick={onAdd}>Agregar al carrito</button>
-        <button onClick={restar}>-</button>
+        <button className='btn' onClick={sumar}>+</button>
+        <p className='contador'>ItemCount: {count}</p>
+        <button className='btn' disabled={count === 0} onClick={onAdd}>Agregar al carrito</button>
+        <button className='btn' onClick={restar}>-</button>
     </div>
   )
 }
