@@ -1,7 +1,6 @@
 import React from 'react'
 import Item from './Item';
 import './card.css'
-import ItemCount from '../ItemCount/ItemCount';
 
 const ItemList = ({items}) => {
 
@@ -10,9 +9,8 @@ const ItemList = ({items}) => {
     {
         items.map((item) => {
             return(
-                <div className='kard' key={item.id}>
+                <div key={item.id}>
                     <Item item={item}/>
-                    <ItemCount/>
                 </div>
             )
         })

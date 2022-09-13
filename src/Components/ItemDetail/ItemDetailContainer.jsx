@@ -2,28 +2,32 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { productos } from '../ItemListContainer/Mock'
-
+import { useParams } from 'react-router-dom'
 import ItemDetail from './ItemDetail'
 
 const ItemDetailContainer = () => {
-    const [product, setProduct] = useState([])
-    useEffect(() => { 
-    const getDetail = new Promise ((res, rej) => {
-        setTimeout(() => {
-            res(productos)
-        }, 500); 
-    });
-        getDetail.then((data) => {
-            setProduct(data);
-        })
-        .catch(() => {
-            console.log('Error 404 Not found')
-        })
-        .finally(() => {
-            console.log('TERMINAMO PA')
-        })
- 
-}, [product] );
+const [product, setProduct] = useState([])
+  
+const {categoryId} = useParams()
+
+  useEffect(() => {
+    const getProducts = new Promise ((res, rej) => {
+      const prodFiltrados = productos.filter((produ) => produ.category === categoryId)
+      setTimeout(() =>{
+        res(categoryId ? prodFiltrados : productos);
+        }, 500);
+      });
+        getProducts.then((data) => {
+          setProduct(data);
+            })
+            .catch(() => {
+              console.log('error 501')
+                })
+                .finally(() =>{
+                  console.log('Gracias por la espera');
+                  })
+
+  }, [categoryId]);
 
   return (
     <div>

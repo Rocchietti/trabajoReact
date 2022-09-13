@@ -5,22 +5,20 @@ margin: 20px;
  align-items: center;
  font-family: Roboto, sans-serif;
 }
-.kard{
-    padding-bottom: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 .detailCard{
+    box-shadow: 10px 5px 10px 5px rgb(253, 152, 0);
     font-size: 20px;
     text-align: center;
     display: flex;
+    flex-direction: column;
     margin: 50px;
 }
+
 .item{
-    padding: 50px;
+    padding: 30px;
 }
-.image{
-    height: 35px;
+Img{
+    height: 500px;
+    width: 600px;
     bottom: 20px;
 }

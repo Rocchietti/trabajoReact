@@ -1,7 +1,7 @@
 import React from 'react'
-import '../ItemListContainer/card.css'
 
 const ItemDetail = ({producto}) => {
+  console.log(producto)
   return (
     <div className='detailCard'> 
           <h1>{producto.title}</h1>
