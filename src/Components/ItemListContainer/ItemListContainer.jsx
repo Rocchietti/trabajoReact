@@ -5,22 +5,24 @@ import ItemList from './ItemList'
 
 const ItemListContainer = () => {
   const [items, setitems] = useState([])
-  useEffect(() => { 
-    const getDetail = new Promise ((res, rej) => {
-        setTimeout(() => {
-            res(productos)
-        }, 500); 
-    });
-        getDetail.then((data) => {
-            setitems(data);
-        })
-        .catch(() => {
-            console.log('Error 404 Not found')
-        })
-        .finally(() => {
-            console.log('TERMINAMO PA')
-        })
-}, [] );
+
+  useEffect(() => {
+    const getProducts = new Promise ((res, rej) => {
+      setTimeout(() =>{
+        res(productos);
+        }, 500);
+      });
+        getProducts.then((data) => {
+          setitems(data);
+            })
+            .catch(() => {
+              console.log('error 501')
+                })
+                .finally(() =>{
+                  console.log('Gracias por la espera');
+                  })
+
+  }, []);
   return (
     <div>
       <ItemList items={items}/>

@@ -4,9 +4,7 @@ import Main from './Components/Main/Main';
 import Layout from './Layout/Layout';
 import { BrowserRouter } from 'react-router-dom';
 const App = () =>  {
-
-
-
+  
   return (
     <BrowserRouter>
       <Layout/>

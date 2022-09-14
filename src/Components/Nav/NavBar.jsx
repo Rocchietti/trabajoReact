@@ -10,18 +10,18 @@ const NavBar = () =>  {
           <Link to='/'> <h1 className='tituloTienda'>Gamergy Store</h1> </Link>
                 <ul className='listUnordened'>
                     <li>
-                        <Link to='/category/:Productos'> Productos </Link>
+                        <Link to='/category/productos'>Productos</Link>
                     </li>
                     <li>
-                        <Link to='/category/:quieneSomos'>¿Quienes somos?</Link>
+                        <Link to='/category/quiene-somos'>¿Quienes somos?</Link>
                     </li>
                     <li>
-                        <Link to='/category/:Contacto'>Contacto</Link>
+                        <Link to='/category/contacto'>Contacto</Link>
                     </li>
                     <li>
-                        <Link to='/category/:miCuenta'>Mi cuenta</Link>
+                        <Link to='/category/mi-cuenta'>Mi cuenta</Link>
                     </li>
-                <CartWidget/>
+                    <Link to='/category/cart'><CartWidget/></Link>
                 </ul>
             </nav>
         </header>

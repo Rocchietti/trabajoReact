@@ -3,7 +3,6 @@ import Item from './Item';
 import './card.css'
 
 const ItemList = ({items}) => {
-
   return (
   <div className='Card'>
     {

@@ -9,8 +9,6 @@ margin: 20px;
     box-shadow: 10px 5px 10px 5px rgb(253, 152, 0);
     font-size: 20px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
     margin: 50px;
 }
 
@@ -21,4 +19,17 @@ Img{
     height: 500px;
     width: 600px;
     bottom: 20px;
+}
+button{
+    width: 150px;
+    height: 50px;
+    margin: 30px;
+    border-radius: 10px;
+    border-style: outset;
+    border-color: rgb(253, 152, 0);
+    color: rgb(0, 0, 0);
+    background-color: whitesmoke;
+    font-size: large;
+    font-family: Roboto, sans-serif;
+    font-weight: bolder;
 }

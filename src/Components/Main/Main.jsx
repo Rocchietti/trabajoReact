@@ -9,11 +9,18 @@ const Main = () => {
   return (
     <div> 
         <Routes> 
-          <Route path= '/' element=
-          {<ItemListContainer/>} />
-          <Route path= '/item/:id' element={<ItemDetailContainer/>} />
-          <Route path= '/sign' element={<h2>Mamoncitos</h2>} />
-          <Route path= '/category/:categoryId' element={<ItemListContainer/>} />
+          <Route 
+          path= '/' 
+          element={<ItemListContainer/>} />
+          <Route 
+          path= '/item/:id' 
+          element={<ItemDetailContainer/>} />
+          <Route 
+          path= '/sign' 
+          element={<h2>Mamoncitos</h2>} />
+          <Route 
+          path= '/category/:categoryId' 
+          element={<ItemListContainer/>} />
         </Routes>
     </div>
   )
