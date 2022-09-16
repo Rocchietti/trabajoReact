@@ -13,12 +13,9 @@ const Main = () => {
           path= '/Home' 
           element={<ItemListContainer/>} />
           <Route 
-          path= '/item/:id' 
+          path= '/item/:itemId' 
           element={<ItemDetailContainer/>} />
-          <Route 
-          path= '/sign' 
-          element={<h2>Mamoncitos</h2>} />
-          <Route 
+          <Route
           path= '/category/:categoryId' 
           element={<ItemListContainer/>} />
         </Routes>

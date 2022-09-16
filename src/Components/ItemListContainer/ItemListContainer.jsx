@@ -9,11 +9,10 @@ const ItemListContainer = () => {
 
   const {categoryId} = useParams();
   useEffect(() => {
-    if ({categoryId}) {
       const getElement = new Promise ((res, rej) => {
         const produFiltrados = productos.filter ( (produ) => produ.category === categoryId)
         setTimeout(() =>{
-          res(produFiltrados);
+          res(categoryId ? produFiltrados : productos);
           }, 300);
         });
           getElement.then((data) => {
@@ -22,22 +21,6 @@ const ItemListContainer = () => {
               .catch(() => {
                 console.log('error 501')
                   });
-    } else {
-      const getProducts = new Promise ((res, rej) => {
-        setTimeout(() =>{
-          res(productos);
-          }, 500);
-        });
-          getProducts.then((data) => {
-            setitems(data);
-              })
-              .catch(() => {
-                console.log('error 501')
-                  })
-                  .finally(() =>{
-                    console.log('Gracias por la espera');
-                    });
-    };
   }, [categoryId]);
   return (
     <div>
