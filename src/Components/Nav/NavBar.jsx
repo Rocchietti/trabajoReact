@@ -7,19 +7,19 @@ const NavBar = () =>  {
             <>
         <header>
             <nav className='navBar'>
-          <Link to='/'> <h1 className='tituloTienda'>Gamergy Store</h1> </Link>
+          <Link to='/Home'> <h1 className='tituloTienda'>Gamergy Store</h1> </Link>
                 <ul className='listUnordened'>
                     <li>
-                        <Link to='/category/productos'>Productos</Link>
+                        <Link to='/category/Placas de Video'>Placas de Video</Link>
                     </li>
                     <li>
-                        <Link to='/category/quiene-somos'>¿Quienes somos?</Link>
+                        <Link to='/category/Placas Madre'>Mother</Link>
                     </li>
                     <li>
-                        <Link to='/category/contacto'>Contacto</Link>
+                        <Link to='/category/Disco de estado Solido'>SSD</Link>
                     </li>
                     <li>
-                        <Link to='/category/mi-cuenta'>Mi cuenta</Link>
+                        <Link to='/category/Monitores'>Monitores</Link>
                     </li>
                     <Link to='/category/cart'><CartWidget/></Link>
                 </ul>
