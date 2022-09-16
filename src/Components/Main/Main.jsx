@@ -10,7 +10,7 @@ const Main = () => {
     <div> 
         <Routes> 
           <Route 
-          path= '/Home' 
+          path= '/' 
           element={<ItemListContainer/>} />
           <Route 
           path= '/item/:itemId' 

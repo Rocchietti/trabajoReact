@@ -7,7 +7,7 @@ const NavBar = () =>  {
             <>
         <header>
             <nav className='navBar'>
-          <Link to='/Home'> <h1 className='tituloTienda'>Gamergy Store</h1> </Link>
+          <Link to='/'> <h1 className='tituloTienda'>Gamergy Store</h1> </Link>
                 <ul className='listUnordened'>
                     <li>
                         <Link to='/category/Placas de Video'>Placas de Video</Link>
