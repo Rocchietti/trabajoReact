@@ -6,7 +6,7 @@ import { useState } from 'react'
 import ItemDetail from './ItemDetail'
 
 const ItemDetailContainer = () => {
-const [product, setProduct] = useState([])
+const [product, setProduct] = useState({})
 
 const { itemId } = useParams();
 
