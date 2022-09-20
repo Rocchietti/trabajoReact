@@ -6,7 +6,6 @@ import { BrowserRouter } from 'react-router-dom';
 import CardContext from './Context/CardContext';
 
 
-
 const App = () =>  {
   
   return (
