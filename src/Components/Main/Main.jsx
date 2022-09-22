@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom';
+import Cart from '../Cart/Cart';
 import ItemDetailContainer from '../ItemDetail/ItemDetailContainer';
 import ItemListContainer from '../ItemListContainer/ItemListContainer';
 import './main.css';
@@ -18,6 +19,7 @@ const Main = () => {
           <Route
           path= '/category/:categoryId' 
           element={<ItemListContainer/>} />
+          <Route path= '/cart' element={<Cart/>} />
         </Routes>
     </div>
   )

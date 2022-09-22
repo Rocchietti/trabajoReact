@@ -21,7 +21,7 @@ const NavBar = () =>  {
                     <li>
                         <Link to='/category/Monitores'>Monitores</Link>
                     </li>
-                    <Link to='/category/cart'><CartWidget/></Link>
+                    <Link to='/cart'><CartWidget/></Link>
                 </ul>
             </nav>
         </header>
