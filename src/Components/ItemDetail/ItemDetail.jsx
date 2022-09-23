@@ -12,7 +12,7 @@ const ItemDetail = ( {producto} ) => {
   
   const {addItem} = useContext(cardContext)
 
-  const onAdd = (count) =>{
+ const onAdd = (count) =>{
     setCant(count)
     addItem(producto, count)
   }

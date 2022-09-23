@@ -14,7 +14,7 @@ const CardContext = ({children}) => {
   } 
 
   const addCounting = (item, counting) => {
-    const updateCart = cart.map((prod) => prod.id === item.id ? {...item, counting: prod.counting + counting}: prod)
+    const updateCart = cart.map((prod) => prod.id === item.id ? {...item, counting: counting}: prod)
     setCart(updateCart)
   }
 
