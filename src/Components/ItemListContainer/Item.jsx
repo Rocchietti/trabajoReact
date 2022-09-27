@@ -12,7 +12,7 @@ const Item = ( {item} ) => {
           <hr />
           </div>
           <p className='item'>{item.img}</p>
-            <h2 className='item'>{item.price}</h2>
+            <h2 className='item'>${item.price}</h2>
           <Link to={`/item/${item.id}`}> <button>Ver detalle</button> </Link> 
     </div>
   )

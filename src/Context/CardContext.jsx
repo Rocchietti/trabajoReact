@@ -9,6 +9,7 @@ const CardContext = ({children}) => {
   const [cart, setCart] = useState([])
 
 
+
   const addItem = (item, counting) => {
   IsinCart(item.id) ? addCounting(item, counting) : setCart([...cart,{...item, counting}])
   } 
@@ -32,7 +33,28 @@ const CardContext = ({children}) => {
     console.log(`eliminando producto ${id}`);
   }
 
-  return   <cardContext.Provider value={{cart, addItem, clearCart, deleteProd}}>
+  const quantProdu = (id) => {
+    const object = cart.find((prod) => prod.id === id );
+    return object?.counting
+  };
+
+  const totalQuantity = () => {
+    let acumulador = 0;
+    for (const prod of cart) {
+      acumulador += prod.counting
+    }
+    return acumulador
+  }
+
+  const totalPrice = () => {
+    let acumulador = 0;
+    cart.forEach((prod) => {
+      acumulador += prod.price * prod.counting
+    });
+    return acumulador;
+  };
+
+  return   <cardContext.Provider value={{cart, addItem, clearCart, deleteProd,totalPrice, quantProdu, totalQuantity}}>
     {children}
   </cardContext.Provider>
 }

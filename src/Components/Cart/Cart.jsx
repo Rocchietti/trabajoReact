@@ -1,12 +1,15 @@
 import React from 'react'
 import { useContext } from 'react'
 import { cardContext } from '../../Context/CardContext'
+import { Link } from 'react-router-dom'
 
 const Cart = () => {
-    const {cart, clearCart, deleteProd,  } = useContext(cardContext)
-    console.log(cart)
+    const {cart, clearCart, deleteProd, totalPrice } = useContext(cardContext)
     if (cart.length === 0){
-        return <h1>El carrito se encuentra vacio.</h1>
+        return <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '350px', fontFamily: 'Roboto' }}>
+        <Link to='/'><button>Agregar compra</button></Link>
+        <h1>El carrito se encuentra vacio.</h1>
+        </div>
     } 
   return (
     <div>
@@ -18,12 +21,13 @@ const Cart = () => {
                 <h3>Cantidad: {item.counting}</h3>
                 <h4>{item.price}.</h4>
                 <button onClick={ ()=>deleteProd(item.id) }>Eliminar producto</button>
-    
+                <Link to='/'><button>Seguir comprando</button></Link>
             </div>
 
             ))
         }
         <button onClick={clearCart}>Limpiar carrito</button>
+        <button>Valor total: ${totalPrice()}</button>
     </div>
   )
 }
