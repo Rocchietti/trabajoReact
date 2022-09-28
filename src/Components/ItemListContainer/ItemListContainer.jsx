@@ -1,34 +1,41 @@
 import React, { useEffect } from 'react'
-import { productos } from './Mock'
+// import { productos } from './Mock'
+import { collection, getDocs, query, where } from 'firebase/firestore'
+import { db } from '../../Firebase/firebaseConfig'
 import { useParams } from 'react-router-dom'
 import { useState } from 'react'
 import ItemList from './ItemList'
 import ClipLoader from "react-spinners/ClipLoader"
 
 const ItemListContainer = () => {
-  const [items, setitems] = useState([]);
+  const [items, setItems] = useState([]);
   
   const [isLoading, setIsLoading] = useState(true);
 
 
   const {categoryId} = useParams();
+
+  
   useEffect(() => {
-      const getElement = new Promise ((res, rej) => {
-        const produFiltrados = productos.filter ( (produ) => produ.category === categoryId)
-        setTimeout(() =>{
-          res(categoryId ? produFiltrados : productos);
-          }, 1500);
-        });
-          getElement.then((data) => {
-            setitems(data);
-            setIsLoading(false)
-              })
-              .catch(() => {
-                console.log('error 501')
-                  });
-                  return () => {
-                    setIsLoading (true);
-                  };
+    const itemCollection = collection(db, 'Productos')
+    const detalles = categoryId ? query(itemCollection, where('category', '==', categoryId)) : itemCollection;
+    getDocs(detalles)
+    .then((res) => {
+      const productos = res.docs.map((prod)=> {
+        return {
+          id: prod.id,
+          ...prod.data()
+        }
+      });
+      setItems(productos);
+      setIsLoading(false)
+    })
+    .catch(() => {
+    console.log('error 501')
+    });
+    return (() => {
+      setIsLoading(true);
+    })
   }, [categoryId]);
   return (
     <div style={{display:'flex', justifyContent:'center', margin:'60px '}}>
