@@ -1,10 +1,12 @@
-import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
+import { addDoc, collection, doc, serverTimestamp, updateDoc } from 'firebase/firestore'
 import { useState } from 'react'
 import React from 'react'
 import { db } from '../../Firebase/firebaseConfig';
 
 
-const Form = ({cart, total, clearCart, handleId}) => {
+
+const Form = ({cart, total, handleId, clearCart}) => {
+
     
     const [fullname, setFullname] = useState('');
     const [phone, setPhone] = useState('');
@@ -22,9 +24,15 @@ const Form = ({cart, total, clearCart, handleId}) => {
 
         addDoc(orderCollection, order)
         .then((res) => {
-            handleId (res.id)
-            clearCart();
+            handleId(res.id)
+            clearCart()
+            updateProd()
         })
+    };
+
+    const updateProd = () => {
+        const orderDoc = doc(db, 'Orders', '9BK1WNnj058Gobvmb923')
+        updateDoc(orderDoc, { total: 11550 })
     }
 
     const handleChangeNombre = (e) => {
