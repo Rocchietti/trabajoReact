@@ -19,7 +19,7 @@ const Cart = () => {
                 <h1>{item.title}</h1>
                 <p>{item.img}</p>
                 <h3>Cantidad: {item.counting}</h3>
-                <h4>{item.price}.</h4>
+                <h4>${item.price}</h4>
                 <button onClick={ ()=>deleteProd(item.id) }>Eliminar producto</button>
                 <Link to='/'><button>Seguir comprando</button></Link>
             </div>

@@ -6,7 +6,7 @@ export const productos = [
         description: `Asus Tuf Gaming Nvidia Geforce Gtx 1660 Ti Evo Oc Edition Graphics Card Pcie 3.0 6Gb Gddr6 Hdmi 2.0B Displayport 1.4 Space-Grade Lubricant Compact Design Gpu Tweak Ii. The ASUS TUF Gaming GeForce® GTX 1660 Ti EVO stacks durability, compatibility, and performance to bring reliable 3D horsepower to the TUF Gaming ecosystem. Stand-out features include Auto-Extreme Technology, TUF compatibility testing, and two fans with space-grade lubricant and IP5X dust resistance. Dust is enemy number one for fans. It's easy to clean the blades, but taking the fan apart to remove dust that has made its way inside is not a simple task. Passing the IP5X certification means the housing is safe from nasty particulates, so you'll never need that deep clean. `,
         stock: 11,
         category: 'Placas de Video', 
-        img: <img src="Placadevideo.png" alt="Placa ASUS NVIDIA TUF 1660 Ti" />
+        img: <img src='Placadevideo.png' alt="Placa ASUS NVIDIA TUF 1660 Ti" />
         },
         {
         id: '2',
