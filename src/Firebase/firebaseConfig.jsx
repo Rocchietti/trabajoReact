@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD6GwBr_4L26wnslqwvSzWUhTmxFwS4tJg",
-  authDomain: "gamergy-store.firebaseapp.com",
-  projectId: "gamergy-store",
-  storageBucket: "gamergy-store.appspot.com",
-  messagingSenderId: "1040409755710",
-  appId: "1:1040409755710:web:006644d52e811a6aeed16f"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID
 };
 
 const app = initializeApp(firebaseConfig);

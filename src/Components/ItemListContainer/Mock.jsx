@@ -48,7 +48,7 @@ export const productos = [
         description: `The ASUS VP249QGR gaming display is built for victory in the professional gaming arena. With its Full HD IPS panel, 144Hz refresh rate with Adaptive-Sync (FreeSync™) and 1ms MPRT for super-smooth gaming visual, it blurs the line between what's virtual and what's real to draw you into truly immersive gaming worlds. It even includes gamer-centric features like ASUS GamePlus technologies to take your gaming experience to a whole new level. Up to 144Hz refresh rate with Adaptive-Sync (FreeSync™) technology and 1ms MPRT decimates lag and motion blur to give you the upper hand in first person shooters, racers, real-time strategy, and sports titles. This ultrafast refresh rate lets you play at the highest visual settings and lets you react instantly to what's onscreen — so you'll get that first strike in. ASUS Shadow Boost technology clarifies dark areas of the game world without overexposing brighter areas — improving overall viewing while also making it easier to spot enemies hidden in dark areas of the map.`,
         stock: 6,
         category: 'Monitores', 
-        img: <img src="Monitor.jpg" alt='Monitor ASUS 23,8" '/>     
+        img: <img src="monitor.jpg" alt='Monitor ASUS 23,8" '/>     
         }
 ]
  export const unicoProducto = productos.find((producto) => producto.id === 3 )
